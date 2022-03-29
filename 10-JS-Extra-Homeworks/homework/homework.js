@@ -89,7 +89,12 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
   var newobjeto = "";
-  newobjeto.hasOwnproperty.map
+  for (i= 0;i < cadena.length;i ++ ){
+    if(cadena[i] !== "a" && cadena[i] !== "b" && cadena [i] !== "c"){ 
+      newobjeto += cadena [i];
+    }
+      }
+return newobjeto 
 }
 
 
@@ -97,6 +102,8 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  
+  return arr.sort((a,b) => a.length-b.length)
 }
 
 
@@ -106,6 +113,15 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  var int = [];
+  for (i = 0 ; i < arreglo1.length ; i++){
+    for ( j = 0 ; j < arreglo2.length; j ++){
+      if (arreglo1[i] === arreglo2[j]){
+        int.push(arreglo1[i])
+      }
+    }
+  }
+  return int
 }
 
 
